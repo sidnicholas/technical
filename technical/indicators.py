@@ -702,7 +702,8 @@ def ichimoku(dataframe, conversion_line_period=20, base_line_periods=60,
         'senkou_span_b': df['senkou_span_b'],
         'chikou_span': df['chikou_span'],
         'cloud_green': df['senkou_span_a'] > df['senkou_span_b'],
-        'cloud_red': df['senkou_span_b'] > df['senkou_span_a']
+        'cloud_red': df['senkou_span_b'] > df['senkou_span_a'],
+        'above_cloud': df['senkou_span_a'] < df['close'] > df['senkou_span_b']
     }
 
 
